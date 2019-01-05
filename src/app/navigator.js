@@ -11,10 +11,8 @@ import Login from '../screens/Login';
 import NewLocation from '../screens/NewLocation';
 import Home from '../screens/Home';
 import YourPath from '../screens/YourPath';
-import CounterNavigator from './counterNavigator';
 import CrossingPaths from '../screens/CrossingPaths';
 
-import CounterNavigator from "./counterNavigator";
 import YouNavigator from "./youNavigator";
 import FollowNavigator from "./followNavigator";
 
@@ -39,31 +37,31 @@ const AppStack = createBottomTabNavigator({
 const AuthStack = createStackNavigator({
   Login: {
     screen: Login
-
   }
 });
 
-export default createAppContainer(
-  createStackNavigator(
+const AppNavigator = createStackNavigator(
     {
       App: {
         screen: AppStack,
         navigationOptions: {
-          header: null
-        }
+          header: null,
+        },
       },
       Auth: {
         screen: AuthStack,
         navigationOptions: {
-          header: null
-        }
-      }
+          header: null,
+        },
+      },
     },
     {
       initialRouteName: "Auth"
     }
-  )
-);
+  );
+
+export default createAppContainer(AppNavigator);
+
 /*
 Stacknavigator
 

@@ -1,14 +1,12 @@
 import React, {Component} from "react";
-import {View, Text, TouchableOpacity} from "react-native";
-import {connect} from "react-redux";
+import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
+import { connect } from "react-redux";
 
+import theme from '../theme';
 import Home from "../screens/Home";
 
-<<<<<<< HEAD
-export class Login extends Component {
-=======
 export default class Login extends Component {
->>>>>>> feature/final_changes
+
   constructor(props) {
     super(props);
     this.state = {};
@@ -27,11 +25,6 @@ export default class Login extends Component {
   }
 }
 
-<<<<<<< HEAD
-const LoginConnected = connect(state => ({app: state}))(Login);
-
-export default LoginConnected;
-=======
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -57,4 +50,3 @@ const styles = StyleSheet.create({
     padding: 15,
   },
 })
->>>>>>> feature/final_changes
