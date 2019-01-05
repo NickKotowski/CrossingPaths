@@ -103,6 +103,7 @@ android {
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "1.0"
+        multiDexEnabled true
         ndk {
             abiFilters "armeabi-v7a", "x86"
         }
@@ -139,6 +140,7 @@ android {
 dependencies {
     compile project(':react-native-firebase')
     implementation project(':react-native-firebase')
+    implementation "com.google.firebase:firebase-firestore:17.1.2"
     compile project(':react-native-gesture-handler')
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation "com.android.support:appcompat-v7:${rootProject.ext.supportLibVersion}"

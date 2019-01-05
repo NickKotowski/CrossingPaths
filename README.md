@@ -63,24 +63,25 @@ Some code to interact with the database. This is almost-working code. For both i
 import firebase from 'react-native-firebase';
 
 class FirebaseService {
-  constructor() {
-    this.ref = firebase.firestore().collection('users')
+  getUser(id) {
+    const ref = firebase.firestore().collection('users')
+    ref.doc(id).get().then((doc) => {
+      if (doc.exists) {
+        return doc.data()
+      } else {
+        // throw error that doc doesn't exist
+      }
+    })
   }
-  async getUser(id) {
-    const doc = await this.ref.doc(id).get()
-    if (doc.exists) {
-      return doc.data()
-    } else {
-      // throw error that doc doesn't exist
-    }
-  }
-  async setUser(user) {
-    const uid = await this.ref.doc(user).set()
-    if(uid) {
-      return uid;
-    } else {
-      //throw error that it did not go too well
-    }
+  setUser(user) {
+    const ref = firebase.firestore().collection('users')
+    ref.set(user).then((uid) => {
+      if(uid) {
+        return uid;
+      } else {
+        //throw error that it did not go too well
+      }
+    })
   }
 }
 export const firebaseService = new FirebaseService()
