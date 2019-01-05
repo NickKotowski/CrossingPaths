@@ -1,0 +1,18 @@
+const INITIAL_STATE = {
+  counter: 0,
+};
+
+export default function reducer(state = INITIAL_STATE, action) {
+  // console.log('AppReducer:', action);
+  switch (action.type) {
+    case 'INCREASE_COUNT': {
+      const newCount = state.counter + 1;
+      return {
+        ...state,
+        counter: newCount,
+      }
+    }
+    default:
+      return state;
+  }
+}
