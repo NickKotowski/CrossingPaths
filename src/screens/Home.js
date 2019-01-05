@@ -5,6 +5,8 @@ import { createBottomTabNavigator, createAppContainer } from "react-navigation";
 import firebase from 'react-native-firebase';
 
 import { increaseCount } from '../store/actions';
+import { Button, TextInput } from '../components';
+import theme from '../theme';
 
 const styles = StyleSheet.create({
   container: {
@@ -20,6 +22,16 @@ const styles = StyleSheet.create({
     alignSelf: 'stretch',
     justifyContent: 'center',
     alignItems: 'center',
+  },
+
+  btnTest: {
+    height: 54,
+    width: '100%',
+    backgroundColor: theme.Color.Main,
+  },
+
+  txtTestButton: {
+    color: theme.Color.White,
   }
 })
 
@@ -91,6 +103,14 @@ export class Home extends Component {
         >
           <Text>I'm to lazy to go to the Bottom</Text>
         </TouchableOpacity>
+
+        <Button 
+          style={styles.btnTest}
+          textStyle={styles.txtTestButton}
+          text='Test'
+        />
+
+        <TextInput placeholder="This is text input" />
       </View>
     );
   }

@@ -3,7 +3,8 @@
 .DS_Store
 
 # Xcode
-#
+
+# Gradle
 build/
 *.pbxuser
 !default.pbxuser
