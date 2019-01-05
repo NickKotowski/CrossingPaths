@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "235404801551",
+    "firebase_url": "https://crossing-paths.firebaseio.com",
+    "project_id": "crossing-paths",
+    "storage_bucket": "crossing-paths.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:235404801551:android:4ff47e67d842e007",
+        "android_client_info": {
+          "package_name": "com.crossingpaths"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "235404801551-77m14iie9d6hkl8er6lui83ba6hrccgo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDryi_xEGGtAVoSQynYx44X6PedrXxarj4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
