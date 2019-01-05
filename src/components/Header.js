@@ -20,14 +20,12 @@ export default class Header extends Component {
   }
 }
 
-const style = StyleSheet.create({
+const styles = StyleSheet.create({
   container: {
     justifyContent: "space-between"
   },
 
   btnLeft: {},
-
-  btnRight: {},
 
   txtTitle: {}
 });

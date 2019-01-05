@@ -36,19 +36,9 @@
 		2D16E6881FA4F8E400B85C8A /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D16E6891FA4F8E400B85C8A /* libReact.a */; };
 		2DCD954D1E0B4F2C00145EB5 /* CrossingPathsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* CrossingPathsTests.m */; };
 		2DF0FFEE2056DD460020B375 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3EA31DF850E9000B6D8A /* libReact.a */; };
-		4F113AD021E06BCE00C7293E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4F113ACF21E06BCD00C7293E /* GoogleService-Info.plist */; };
-<<<<<<< HEAD
-
 		4F113BCE21E079E400C7293E /* libRNFirebase.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F113B5721E075D700C7293E /* libRNFirebase.a */; };
 		4F113C0A21E07BBE00C7293E /* libRNGestureHandler.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F113C0921E07B9B00C7293E /* libRNGestureHandler.a */; };
-
-		5A08E6A479024D30A429616C /* libRNGestureHandler.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AAE2CFF0BB524D6FAF5AE760 /* libRNGestureHandler.a */; };
-		75F72604E69387357035C1EE /* libPods-CrossingPaths-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A1F051793146122BDA53795 /* libPods-CrossingPaths-tvOS.a */; };
-
-=======
-		4F113BCE21E079E400C7293E /* libRNFirebase.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F113B5721E075D700C7293E /* libRNFirebase.a */; };
-		4F113C0A21E07BBE00C7293E /* libRNGestureHandler.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F113C0921E07B9B00C7293E /* libRNGestureHandler.a */; };
->>>>>>> f99de5ee12a794eb1a73ba4972e7176bdbc1df13
+		4FF4CCFF21E0A69400A5798D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4FF4CCFE21E0A69300A5798D /* GoogleService-Info.plist */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		8E0C2A21AC054049E93553B0 /* libPods-CrossingPaths.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F51EAD793F7CECC41C7FE15 /* libPods-CrossingPaths.a */; };
 		9D6F1AC16C81C84483BAD164 /* libPods-CrossingPathsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 320F9D79B6DC786B7EA2B399 /* libPods-CrossingPathsTests.a */; };
@@ -296,10 +286,6 @@
 			remoteGlobalIDString = 3D3CD9181DE5FBD800167DC4;
 			remoteInfo = "jschelpers-tvOS";
 		};
-<<<<<<< HEAD
-
-=======
->>>>>>> f99de5ee12a794eb1a73ba4972e7176bdbc1df13
 		4F113B5621E075D700C7293E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 910A32D4BDF14FFB907AC4C7 /* RNFirebase.xcodeproj */;
@@ -314,11 +300,6 @@
 			remoteGlobalIDString = 134814201AA4EA6300B7C361;
 			remoteInfo = RNGestureHandler;
 		};
-<<<<<<< HEAD
-
-
-=======
->>>>>>> f99de5ee12a794eb1a73ba4972e7176bdbc1df13
 		5E9157321DD0AC6500FF2AA8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */;
@@ -333,26 +314,6 @@
 			remoteGlobalIDString = 2D2A28201D9B03D100D4039D;
 			remoteInfo = "RCTAnimation-tvOS";
 		};
-<<<<<<< HEAD
-
-
-		7110500421E063C500460CDF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 26E06AF0854D458B8D8B359D /* RNGestureHandler.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 134814201AA4EA6300B7C361;
-			remoteInfo = RNGestureHandler;
-		};
-		7110503B21E076C600460CDF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 910A32D4BDF14FFB907AC4C7 /* RNFirebase.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 134814201AA4EA6300B7C361;
-			remoteInfo = RNFirebase;
-		};
-
-=======
->>>>>>> f99de5ee12a794eb1a73ba4972e7176bdbc1df13
 		78C398B81ACF4ADC00677621 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */;
@@ -398,22 +359,13 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = CrossingPaths/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = CrossingPaths/main.m; sourceTree = "<group>"; };
 		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
-<<<<<<< HEAD
-
 		1E174785FE00B0F0C2017749 /* libPods-CrossingPaths-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CrossingPaths-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-
-		26E06AF0854D458B8D8B359D /* RNGestureHandler.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNGestureHandler.xcodeproj; path = "../node_modules/react-native-gesture-handler/ios/RNGestureHandler.xcodeproj"; sourceTree = "<group>"; };
-		2750B8BB4F2578BC0543084C /* libPods-CrossingPaths.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CrossingPaths.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-
-=======
-		1E174785FE00B0F0C2017749 /* libPods-CrossingPaths-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CrossingPaths-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
->>>>>>> f99de5ee12a794eb1a73ba4972e7176bdbc1df13
 		2D02E47B1E0B4A5D006451C7 /* CrossingPaths-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CrossingPaths-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* CrossingPaths-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CrossingPaths-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D16E6891FA4F8E400B85C8A /* libReact.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libReact.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		320F9D79B6DC786B7EA2B399 /* libPods-CrossingPathsTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CrossingPathsTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4F113ACF21E06BCD00C7293E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4F113BDD21E07B9B00C7293E /* RNGestureHandler.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNGestureHandler.xcodeproj; path = "../node_modules/react-native-gesture-handler/ios/RNGestureHandler.xcodeproj"; sourceTree = "<group>"; };
+		4FF4CCFE21E0A69300A5798D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
 		6F51EAD793F7CECC41C7FE15 /* libPods-CrossingPaths.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CrossingPaths.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
@@ -459,17 +411,7 @@
 				832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */,
 				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
-<<<<<<< HEAD
-
 				8E0C2A21AC054049E93553B0 /* libPods-CrossingPaths.a in Frameworks */,
-
-				249535ADCA324520BD1D973B /* libRNFirebase.a in Frameworks */,
-				E5CAAA5F227C1689F60A82B9 /* libPods-CrossingPaths.a in Frameworks */,
-				5A08E6A479024D30A429616C /* libRNGestureHandler.a in Frameworks */,
-
-=======
-				8E0C2A21AC054049E93553B0 /* libPods-CrossingPaths.a in Frameworks */,
->>>>>>> f99de5ee12a794eb1a73ba4972e7176bdbc1df13
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -583,7 +525,7 @@
 		13B07FAE1A68108700A75B9A /* CrossingPaths */ = {
 			isa = PBXGroup;
 			children = (
-				4F113ACF21E06BCD00C7293E /* GoogleService-Info.plist */,
+				4FF4CCFE21E0A69300A5798D /* GoogleService-Info.plist */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -638,10 +580,6 @@
 			name = "Recovered References";
 			sourceTree = "<group>";
 		};
-<<<<<<< HEAD
-
-=======
->>>>>>> f99de5ee12a794eb1a73ba4972e7176bdbc1df13
 		4F113B2E21E075D700C7293E /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -658,11 +596,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-<<<<<<< HEAD
-
-
-=======
->>>>>>> f99de5ee12a794eb1a73ba4972e7176bdbc1df13
 		5E91572E1DD0AC6500FF2AA8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -680,28 +613,6 @@
 			name = "Recovered References";
 			sourceTree = "<group>";
 		};
-
-<<<<<<< HEAD
-
-		7110500121E063C500460CDF /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				7110500521E063C500460CDF /* libRNGestureHandler.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		7110501321E076C600460CDF /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				7110503C21E076C600460CDF /* libRNFirebase.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-
-=======
->>>>>>> f99de5ee12a794eb1a73ba4972e7176bdbc1df13
 		78C398B11ACF4ADC00677621 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -824,6 +735,7 @@
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
+				C9467D72A257EDE2AC77B580 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -957,27 +869,12 @@
 					ProjectRef = 146833FF1AC3E56700842450 /* React.xcodeproj */;
 				},
 				{
-<<<<<<< HEAD
-
-=======
->>>>>>> f99de5ee12a794eb1a73ba4972e7176bdbc1df13
 					ProductGroup = 4F113B2E21E075D700C7293E /* Products */;
 					ProjectRef = 910A32D4BDF14FFB907AC4C7 /* RNFirebase.xcodeproj */;
 				},
 				{
 					ProductGroup = 4F113BDE21E07B9B00C7293E /* Products */;
 					ProjectRef = 4F113BDD21E07B9B00C7293E /* RNGestureHandler.xcodeproj */;
-<<<<<<< HEAD
-
-					ProductGroup = 7110501321E076C600460CDF /* Products */;
-					ProjectRef = 910A32D4BDF14FFB907AC4C7 /* RNFirebase.xcodeproj */;
-				},
-				{
-					ProductGroup = 7110500121E063C500460CDF /* Products */;
-					ProjectRef = 26E06AF0854D458B8D8B359D /* RNGestureHandler.xcodeproj */;
-
-=======
->>>>>>> f99de5ee12a794eb1a73ba4972e7176bdbc1df13
 				},
 			);
 			projectRoot = "";
@@ -1215,7 +1112,6 @@
 			remoteRef = 3DAD3EAE1DF850E9000B6D8A /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-
 		4F113B5721E075D700C7293E /* libRNFirebase.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -1230,11 +1126,6 @@
 			remoteRef = 4F113C0821E07B9B00C7293E /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-
-<<<<<<< HEAD
-
-=======
->>>>>>> f99de5ee12a794eb1a73ba4972e7176bdbc1df13
 		5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -1249,26 +1140,6 @@
 			remoteRef = 5E9157341DD0AC6500FF2AA8 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-<<<<<<< HEAD
-
-
-		7110500521E063C500460CDF /* libRNGestureHandler.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libRNGestureHandler.a;
-			remoteRef = 7110500421E063C500460CDF /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		7110503C21E076C600460CDF /* libRNFirebase.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libRNFirebase.a;
-			remoteRef = 7110503B21E076C600460CDF /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-
-=======
->>>>>>> f99de5ee12a794eb1a73ba4972e7176bdbc1df13
 		78C398B91ACF4ADC00677621 /* libRCTLinking.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -1306,7 +1177,7 @@
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
-				4F113AD021E06BCE00C7293E /* GoogleService-Info.plist in Resources */,
+				4FF4CCFF21E0A69400A5798D /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1398,6 +1269,29 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C9467D72A257EDE2AC77B580 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-CrossingPaths/Pods-CrossingPaths-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/gRPC/gRPCCertificates.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/gRPC-C++/gRPCCertificates.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/gRPCCertificates.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CrossingPaths/Pods-CrossingPaths-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E08680812B4D8C6BD2F4C1EE /* [CP] Check Pods Manifest.lock */ = {
