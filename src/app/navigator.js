@@ -6,6 +6,7 @@ import NewLocation from '../screens/NewLocation';
 import Home from '../screens/Home';
 import YourPath from '../screens/YourPath';
 import CounterNavigator from './counterNavigator';
+import CrossingPaths from '../screens/CrossingPaths';
 
 const AppNavigator = createBottomTabNavigator({
   Login: {
@@ -20,8 +21,8 @@ const AppNavigator = createBottomTabNavigator({
     screen: Home,
     title: 'Home',
   },
-  Counter: {
-    screen: CounterNavigator,
+  CrossingPaths: {
+    screen: CrossingPaths,
   }
 });
 

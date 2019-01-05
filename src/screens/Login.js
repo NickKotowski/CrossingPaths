@@ -7,32 +7,6 @@ import { increaseCount } from '../store/actions';
 import { Button, TextInput } from '../components';
 import theme from '../theme';
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: 'white',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-
-  btnLogin: {
-    height: 54,
-    width: '95%',
-    marginVertical: 20,
-    backgroundColor: theme.Color.Main,
-    borderRadius: 8,
-  },
-
-  txtLoginButton: {
-    color: theme.Color.White,
-    fontWeight: 'bold',
-  },
-
-  input: {
-    padding: 15,
-  },
-})
-
 export default class Login extends Component {
   constructor(props) {
     super(props);
@@ -108,3 +82,29 @@ export default class Login extends Component {
     );
   }
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: 'white',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+
+  btnLogin: {
+    height: 54,
+    width: '95%',
+    marginVertical: 20,
+    backgroundColor: theme.Color.Main,
+    borderRadius: 8,
+  },
+
+  txtLoginButton: {
+    color: theme.Color.White,
+    fontWeight: 'bold',
+  },
+
+  input: {
+    padding: 15,
+  },
+})
