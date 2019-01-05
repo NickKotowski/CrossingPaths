@@ -1,6 +1,5 @@
 import React, { Component, Fragment } from 'react';
 import { TextInput, Text, View, StyleSheet } from'react-native';
-import styles from './styles';
 
 export default class Button extends Component{
     constructor(props){
@@ -23,7 +22,7 @@ export default class Button extends Component{
     }
 }
 
-const style = StyleSheet.create({
+const styles = StyleSheet.create({
     txtLabel: {
         fontSize: 18,
         fontStyle: 'italic',

@@ -1,6 +1,5 @@
 import React, { Component, Fragment } from 'react';
 import { Text, View, StyleSheet, TouchableOpacity, Image } from'react-native';
-import styles from './styles';
 
 export default class Header extends Component{
     constructor(props){
@@ -18,14 +17,14 @@ export default class Header extends Component{
                     {title}
                 </Text>
                 <TouchableOpacity style={styles.btnRight} >
-                    
+
                 </TouchableOpacity>
             </View>
         );
     }
 }
 
-const style = StyleSheet.create({
+const styles = StyleSheet.create({
     container:{
         justifyContent: 'space-between',
     },
@@ -37,7 +36,7 @@ const style = StyleSheet.create({
     btnRight: {
 
     },
-    
+
     txtTitle: {
 
     }
