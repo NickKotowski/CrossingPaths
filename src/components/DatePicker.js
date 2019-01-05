@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import { TextInput, Text, View, StyleSheet } from'react-native';
+import DatePicker from 'react-native-datepicker';
 import theme from '../theme';
 
 export default class Button extends Component{
@@ -14,9 +15,20 @@ export default class Button extends Component{
                 {label && <Text style={[styles.txtLabel, labelStyle]}>
                     {label}
                 </Text>}
-                <TextInput
+                <DatePicker
                     style={[styles.input, inputStyle]}
-                    underlineColorAndroid={false}
+                    confirmBtnText='Confirm'
+                    cancelBtnText='Cancel'
+                    customStyles={{
+                      dateInput:{
+                        borderWidth: 0,
+                      },
+                      dateText:{
+                        fontStyle: 'italic',
+                        fontSize: 18,
+                        alignSelf: 'flex-start',
+                      },
+                    }}
                     {...more}
                 />
             </View>
@@ -43,5 +55,6 @@ const styles = StyleSheet.create({
         borderBottomColor: theme.Color.Border,
         fontSize: 18,
         padding: 5,
+        width: '100%'
     }
 })

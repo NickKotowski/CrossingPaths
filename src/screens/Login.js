@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { View, StyleSheet, Text, TouchableOpacity, KeyboardAvoidingView } from 'react-native';
-import { connect } from 'react-redux';
 import { createBottomTabNavigator, createAppContainer } from "react-navigation";
 // import firebase from 'react-native-firebase';
 
@@ -18,7 +17,7 @@ const styles = StyleSheet.create({
 
   btnLogin: {
     height: 54,
-    width: '90%',
+    width: '95%',
     marginVertical: 20,
     backgroundColor: theme.Color.Main,
     borderRadius: 8,
@@ -34,7 +33,7 @@ const styles = StyleSheet.create({
   },
 })
 
-export class Home extends Component {
+export default class Login extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -109,9 +108,3 @@ export class Home extends Component {
     );
   }
 }
-
-const HomeConnected = connect(state => ({ app: state }), {
-  increaseCount,
-})(Home);
-
-export default HomeConnected;
