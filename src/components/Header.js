@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react';
 import { Text, View, StyleSheet, TouchableOpacity, Image } from'react-native';
 import styles from './styles';
 
-export default class Button extends Component{
+export default class Header extends Component{
     constructor(props){
         super(props);
     }
@@ -12,7 +12,7 @@ export default class Button extends Component{
         return(
             <View style={styles.container}>
                 <TouchableOpacity style={styles.btnLeft} >
-                    
+                    <Image />
                 </TouchableOpacity>
                 <Text>
                     {title}
