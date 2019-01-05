@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, StyleSheet, Text, TouchableOpacity } from 'react-native';
+import { View, StyleSheet, Text, TouchableOpacity, KeyboardAvoidingView } from 'react-native';
 import { connect } from 'react-redux';
 import { createBottomTabNavigator, createAppContainer } from "react-navigation";
 // import firebase from 'react-native-firebase';
@@ -15,24 +15,23 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
-  button: {
-    padding: 10,
-    margin: 10,
-    backgroundColor: 'blue',
-    alignSelf: 'stretch',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
 
-  btnTest: {
+  btnLogin: {
     height: 54,
-    width: '100%',
+    width: '90%',
+    marginVertical: 20,
     backgroundColor: theme.Color.Main,
+    borderRadius: 8,
   },
 
-  txtTestButton: {
+  txtLoginButton: {
     color: theme.Color.White,
-  }
+    fontWeight: 'bold',
+  },
+
+  input: {
+    padding: 15,
+  },
 })
 
 export class Home extends Component {
@@ -89,29 +88,24 @@ export class Home extends Component {
 
   render() {
     return (
-      <View style={styles.container}>
-        <Text>Welcome to the Test App</Text>
-        <Text>Useless</Text>
-        <TouchableOpacity
-          style={styles.button}
-          onPress={this.setNewUser}
-        >
-          <Text>Add 1</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          onPress={() => this.props.navigation.navigate('CounterScreen', { count: 400 })}
-        >
-          <Text>I'm to lazy to go to the Bottom</Text>
-        </TouchableOpacity>
-
-        <Button
-          style={styles.btnTest}
-          textStyle={styles.txtTestButton}
-          text='Test'
+      <KeyboardAvoidingView style={styles.container}>
+        <TextInput
+          style={styles.input}
+          label="Username"
+          placeholder="Enter your username"
         />
-
-        <TextInput label="Name" placeholder="This is text input" />
-      </View>
+        <TextInput
+          style={styles.input}
+          label="Password"
+          placeholder="Enter your password"
+          secureTextEntry
+        />
+        <Button
+          style={styles.btnLogin}
+          textStyle={styles.txtLoginButton}
+          text='Login'
+        />
+      </KeyboardAvoidingView>
     );
   }
 }
