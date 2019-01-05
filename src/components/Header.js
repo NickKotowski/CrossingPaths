@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import { Text, View, StyleSheet, TouchableOpacity } from'react-native';
+import { Text, View, StyleSheet, TouchableOpacity, Image } from'react-native';
 import styles from './styles';
 
 export default class Button extends Component{
@@ -8,10 +8,16 @@ export default class Button extends Component{
     }
 
     render(){
-        const { label, labelStyle, inputStyle, ...more } = this.props;
+        const { title, labelStyle, inputStyle, ...more } = this.props;
         return(
-            <View>
-                <TouchableOpacity>
+            <View style={styles.container}>
+                <TouchableOpacity style={styles.btnLeft} >
+                    
+                </TouchableOpacity>
+                <Text>
+                    {title}
+                </Text>
+                <TouchableOpacity style={styles.btnRight} >
                     
                 </TouchableOpacity>
             </View>
@@ -20,12 +26,19 @@ export default class Button extends Component{
 }
 
 const style = StyleSheet.create({
-    txtLabel: {
-        fontSize: 18,
-        fontStyle: 'italic',
+    container:{
+        justifyContent: 'space-between',
     },
 
-    input:{
-        fontStyle: 'italic',
+    btnLeft: {
+
+    },
+
+    btnRight: {
+
+    },
+    
+    txtTitle: {
+
     }
 })
