@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { View, StyleSheet, Text, TouchableOpacity } from 'react-native';
 import { connect } from 'react-redux';
 import { createBottomTabNavigator, createAppContainer } from "react-navigation";
-import firebase from 'react-native-firebase';
+// import firebase from 'react-native-firebase';
 
 import { increaseCount } from '../store/actions';
 import { Button, TextInput } from '../components';
@@ -44,8 +44,8 @@ export class Home extends Component {
   }
 
   componentDidMount() {
-    this.listUsers();
-    console.log("Hello");
+    // this.listUsers();
+    // console.log("Hello");
   }
 
   count = () => {
@@ -57,35 +57,35 @@ export class Home extends Component {
     return value;
   }
 
-  setNewUser = () => {
-    const ref = firebase.firestore().collection('users');
-    ref.add({name: 'Nick'}).then((doc) => {
-      if (doc.id) {
-        // console.log(doc.id);
-        return doc.id;
-      } else {
-        console.log("It did write, but uuid is empty. Which is fucking weird.")
-        //throw error that it did not go too well
-      }
-    })
-    .then((id) => console.log(id))
-    .catch((e) => console.log(e));
-  }
-
-  listUsers = () => {
-    console.log("Show me users bitch");
-    firebase.firestore().collection('users')
-    .get()
-    .then(snapshot => {
-      snapshot
-        .docs
-        .forEach(doc => {
-          console.log(doc);
-          console.log(doc._data.name)
-        });
-    }).
-    catch((e) => console.log(e));
-  }
+  // setNewUser = () => {
+  //   const ref = firebase.firestore().collection('users');
+  //   ref.add({name: 'Nick'}).then((doc) => {
+  //     if (doc.id) {
+  //       // console.log(doc.id);
+  //       return doc.id;
+  //     } else {
+  //       console.log("It did write, but uuid is empty. Which is fucking weird.")
+  //       //throw error that it did not go too well
+  //     }
+  //   })
+  //   .then((id) => console.log(id))
+  //   .catch((e) => console.log(e));
+  // }
+  //
+  // listUsers = () => {
+  //   console.log("Show me users bitch");
+  //   firebase.firestore().collection('users')
+  //   .get()
+  //   .then(snapshot => {
+  //     snapshot
+  //       .docs
+  //       .forEach(doc => {
+  //         console.log(doc);
+  //         console.log(doc._data.name)
+  //       });
+  //   }).
+  //   catch((e) => console.log(e));
+  // }
 
   render() {
     return (
@@ -104,13 +104,13 @@ export class Home extends Component {
           <Text>I'm to lazy to go to the Bottom</Text>
         </TouchableOpacity>
 
-        <Button 
+        <Button
           style={styles.btnTest}
           textStyle={styles.txtTestButton}
           text='Test'
         />
 
-        <TextInput placeholder="This is text input" />
+        <TextInput label="Name" placeholder="This is text input" />
       </View>
     );
   }
