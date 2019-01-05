@@ -6,11 +6,13 @@ import firebase from 'react-native-firebase';
 
 import { increaseCount } from '../store/actions';
 
+import Entry from '../components/Entry';
+
 export class YourPath extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      stay: [],
+      stays: [],
     };
   }
 
@@ -19,23 +21,34 @@ export class YourPath extends Component {
   }
 
   getStays = () => {
-    console.log("Show me users bitch");
-    firebase.firestore().collection('stays')
-    .get()
+    firebase.firestore().collection('users').doc('iOzpZbYYFDcBEZbW6tkz').get()
     .then(snapshot => {
       let allStays = [];
-      snapshot.docs.forEach(doc => {
-        allStays.push(doc._data)
-      });
-      this.setState({ stay: allStays }, () => console.log(this.state))
-    }).
-    catch((e) => console.log(e));
+      snapshot._data.stays.forEach(stay => firebase.firestore().collection('stays').doc(stay).get()
+      .then(result => {
+        allStays.push(result._data);
+      })
+      .catch((e) => console.log(e))
+      )
+      this.setState({ stays: allStays });
+    })
+    .catch((e) => console.log(e));
+  }
+
+  getComponents = () => {
+    const returnViews = [];
+    this.state.stays.forEach(stay => {
+      console.log(stay);
+      returnViews.push(<Text>Nick</Text>)
+    });
+    console.log(this.state);
+    return returnViews;
   }
 
   render() {
     return (
       <View>
-
+        {this.getComponents()}
       </View>
     );
   }
