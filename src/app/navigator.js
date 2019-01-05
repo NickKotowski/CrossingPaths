@@ -7,8 +7,12 @@ import {
   createMaterialTopTabNavigator
 } from "react-navigation";
 
-import Home from "../screens/Home";
-import Login from "../screens/Login";
+import Login from '../screens/Login';
+import NewLocation from '../screens/NewLocation';
+import Home from '../screens/Home';
+import YourPath from '../screens/YourPath';
+import CounterNavigator from './counterNavigator';
+import CrossingPaths from '../screens/CrossingPaths';
 
 import CounterNavigator from "./counterNavigator";
 import YouNavigator from "./youNavigator";
@@ -26,12 +30,16 @@ const AppStack = createBottomTabNavigator({
   },
   Following: {
     screen: FollowNavigator
-  }
+  },
+  CrossingPaths: {
+    screen: CrossingPaths,
+  },
 });
 
 const AuthStack = createStackNavigator({
   Login: {
     screen: Login
+
   }
 });
 

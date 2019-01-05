@@ -1,15 +1,14 @@
-import React, {Component, Fragment} from 'react';
+import React, {Component} from 'react';
 import {
   FlatList,
   StyleSheet,
   Text,
   View,
-  TouchableHighlight,
-  Image,
+  TouchableHighlight
 } from 'react-native';
 import {connect} from 'react-redux';
 import {increaseCount} from '../store/actions';
-import {Button} from "../components";
+import { Button, Entry } from "../components";
 import theme from "../theme";
 // import firebase from 'react-native-firebase';
 
@@ -18,7 +17,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: 'white',
     padding: 20,
-    paddingTop: 30
+    paddingTop: 30,
   },
   showWith: {
     fontStyle: 'italic',
@@ -31,8 +30,8 @@ const styles = StyleSheet.create({
   item: {
     padding: 10,
     borderRadius: 10,
-    borderColor: '#a7a7a7',
-    borderWidth: 1,
+    // borderColor: '#a7a7a7',
+    // borderWidth: 1,
     marginTop: 10,
     elevation: 2
   },
@@ -58,44 +57,12 @@ const styles = StyleSheet.create({
     fontSize: 16,
     marginTop: 3
   },
-  btnTest: {
-    height: 54,
-    width: '100%',
-    backgroundColor: theme.Color.Main,
-    borderRadius: 10,
-    marginTop: 10
-  },
 
-  txtTestButton: {
-    color: theme.Color.White,
-  },
-  buttons: {
-    flexDirection: 'row',
-    alignItems: 'center'
-  },
-  button: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-    padding: 15
-  },
-  buttonLabel: {
-    fontSize: 15,
-    marginLeft: 5,
-    color: '#3c59ff',
-  },
-  buttonDeleteLabel: {
-    fontSize: 15,
-    marginLeft: 5,
-    color: 'red',
-  },
-  buttonContainer:{
-    flexDirection: 'row',
-    alignItems: 'center',
-  },
-
-  iconEdit:{
-    tintColor: '#3c59ff',
+  list:{
+    shadowOffset: { width: 1, height: 1 },
+    shadowColor: '#979797',
+    shadowOpacity: 1,
+    shadowRadius: 1,
   }
 })
 
@@ -174,60 +141,17 @@ export class YourPath extends Component {
 
   _renderItem({item}) {
     if (!item) return null;
-    return <View style={styles.item}>
-      <View style={styles.title}>
-        <Text style={styles.name}>{item.name}</Text>
-        <View style={styles.row}>
-          <Text style={styles.number}>{item.lang.toString() + ', '}</Text>
-          <Text style={styles.number}>{item.lat.toString()}</Text>
-
-        </View>
-      </View>
-
-      <View style={styles.row}>
-        <Text style={styles.number}>{item.from+ ' - '}</Text>
-        <Text style={styles.number}>{item.to}</Text>
-      </View>
-      <Text style={styles.description}>{item.description}</Text>
-      <View style={styles.buttons}>
-        <TouchableHighlight
-          style={styles.button}
-          underlayColor="#f7f7f7"
-          onPress={() => {}}
-        >
-          <View style={styles.buttonContainer}>
-            <Image source={theme.Image.Edit} style={styles.iconEdit} />
-            <Text style={styles.buttonLabel}>Edit</Text>
-          </View>
-        </TouchableHighlight>
-        <TouchableHighlight
-          style={styles.button}
-          underlayColor="#f7f7f7"
-          onPress={() => {}}
-        >
-        <View style={styles.buttonContainer}>
-          <Image source={theme.Image.Delete} />
-          <Text style={styles.buttonDeleteLabel}>Delete</Text>
-        </View>
-        </TouchableHighlight>
-      </View>
-    </View>
+    return <Entry data={item} />
   }
 
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.showWith}>Showing your path (Nick Kotowski): 1</Text>
-        <Text style={styles.followBy}>5 people are following you</Text>
         <FlatList
+          style={styles.list}
           showsVerticalScrollIndicator={false}
           data={this.places}
           renderItem={this._renderItem}
-        />
-        <Button
-          style={styles.btnTest}
-          textStyle={styles.txtTestButton}
-          text='Add Location'
         />
       </View>
     );
