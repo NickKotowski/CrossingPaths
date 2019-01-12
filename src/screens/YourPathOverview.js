@@ -162,6 +162,7 @@ const styles = StyleSheet.create({
     padding: 10,
     borderRadius: 10,
     paddingTop: 20,
+    elevation: 4,
   },
   title: {
     flexDirection: 'row',

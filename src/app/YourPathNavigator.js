@@ -16,14 +16,22 @@ const YourPathNavigator = createStackNavigator({
         fontSize: 14,
       }
     },
-    title: 'Your Path',
   },
   YouAddLocation: {
     screen: YouAddLocation,
+    navigationOptions: {
+      title: 'Add Location',
+      headerTitleStyle: {
+        color: theme.color.main,
+        fontSize: 14,
+      }
+    },
   },
   YouAddMap: {
     screen: YouAddMap,
   }
+}, {
+  initialRouteName: 'YouAddLocation',
 });
 
 export default createAppContainer(YourPathNavigator);
