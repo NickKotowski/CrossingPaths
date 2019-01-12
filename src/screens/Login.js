@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import { View, Image, Text, StyleSheet, TextInput, TouchableOpacity, Animated, Easing } from "react-native";
+import { View, Image, Text, StyleSheet, TextInput, TouchableOpacity, Animated, Easing, KeyboardAvoidingView } from "react-native";
 import { connect } from "react-redux";
 
 import { setUsername, increaseCount } from '../store/actions';
@@ -44,7 +44,7 @@ export class Login extends Component {
 
   render() {
     return (
-      <View style={styles.container}>
+      <KeyboardAvoidingView style={styles.container} behavior="padding">
         <Animated.View
           style={[styles.wrapper, { height: this.state.layoutHeightOfLoginBox }]}
         >
@@ -66,7 +66,7 @@ export class Login extends Component {
         <Text style={styles.text}>
           Alpha Version - Created @ Hackathon Hub Hoi An (Vietnam) 2019
         </Text>
-      </View>
+      </KeyboardAvoidingView>
     );
   }
 }
@@ -105,8 +105,11 @@ const styles = StyleSheet.create({
   textInput: {
     borderBottomColor: theme.color.main,
     borderBottomWidth: 1,
-    paddingTop: 20,
     width: '60%',
+    height: 40,
+    margin: 0,
+    padding: 0,
+    paddingTop: 20,
   },
   loginButton: {
     marginTop: 20,
