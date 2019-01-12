@@ -31,7 +31,7 @@ const YourPathNavigator = createStackNavigator({
     screen: YouAddMap,
   }
 }, {
-  initialRouteName: 'YouAddLocation',
+  initialRouteName: 'YouOverview',
 });
 
 export default createAppContainer(YourPathNavigator);
