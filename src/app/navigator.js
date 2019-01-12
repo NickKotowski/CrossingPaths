@@ -3,10 +3,10 @@ import {
   createBottomTabNavigator,
   createAppContainer,
   createStackNavigator,
-  createSwitchNavigator,
-  createMaterialTopTabNavigator
 } from "react-navigation";
-import { Animated, Easing } from 'react-native';
+import { Animated, Easing, Image, StyleSheet } from 'react-native';
+
+import theme from '../theme';
 
 import LaunchScreen from '../screens/LaunchScreen';
 import Login from '../screens/Login';
@@ -15,9 +15,52 @@ import Home from '../screens/Home';
 // import YourPath from '../screens/YourPath';
 // import CrossingPaths from '../screens/CrossingPaths';
 
+const styles = StyleSheet.create({
+  tabbarIcon: {
+    width: 20,
+    height: 20,
+  },
+});
+
 const AppStack = createBottomTabNavigator({
-  You: {
+  YourPath: {
     screen: Home,
+    navigationOptions: {
+      tabBarLabel: 'Your Path',
+      tabBarIcon: ({ focused }) => (
+        focused
+        ? <Image source={require('../assets/your_path_active.png')} style={styles.tabbarIcon} />
+        : <Image source={require('../assets/your_path_inactive.png')} style={styles.tabbarIcon} />
+      ),
+    }
+  },
+  CrossingPaths: {
+    screen: Home,
+    navigationOptions: {
+      tabBarLabel: 'Crossing Paths',
+      tabBarIcon: ({ focused }) => (
+        focused
+        ? <Image source={require('../assets/crossing_path_active.png')} style={styles.tabbarIcon} />
+        : <Image source={require('../assets/crossing_path_inactive.png')} style={styles.tabbarIcon} />
+      ),
+    }
+  },
+  FollowingPaths: {
+    screen: Home,
+    navigationOptions: {
+      tabBarLabel: 'Following Paths',
+      tabBarIcon: ({ focused }) => (
+        focused
+        ? <Image source={require('../assets/following_path_active.png')} style={styles.tabbarIcon} />
+        : <Image source={require('../assets/following_path_inactive.png')} style={styles.tabbarIcon} />
+      ),
+    }
+  },
+}, {
+  tabBarOptions: {
+    activeTintColor: theme.color.main,
+    inactiveTintColor: theme.color.lightGray,
+
   },
 });
 

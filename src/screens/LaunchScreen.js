@@ -16,7 +16,7 @@ export class LaunchScreen extends Component {
 
   navigateToNextScreen = () => {
     if (this.props.app.userName !== '') {
-      this.props.navigation.navigate('You');
+      this.props.navigation.navigate('YourPath');
     } else {
       this.props.navigation.navigate('Auth');
     }

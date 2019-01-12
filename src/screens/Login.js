@@ -38,7 +38,7 @@ export class Login extends Component {
       alert("Please write a user name. This is what other people will search for when trying to find you");
     } else {
       this.props.setUsername(this.state.text);
-      this.props.navigation.navigate("You");
+      this.props.navigation.navigate("YourPath");
     }
   }
 
