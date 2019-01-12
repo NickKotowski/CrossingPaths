@@ -77,14 +77,14 @@ export class YouAddLocation extends Component {
   )
 
   getGeoLocation = () => (
-  <View>
-    <Text style={styles.title}>Location:</Text>
-    <View style={[styles.marginTop, styles.marginBottom]}>
-      <TouchableHighlight onPress={this.goToLocationScreen} style={styles.button}>
-        <Text style={styles.buttonText}>{this.getLocation()}</Text>
-      </TouchableHighlight>
+    <View>
+      <Text style={styles.title}>Location (Coordinates):</Text>
+      <View style={[styles.marginTop, styles.marginBottom]}>
+        <TouchableHighlight onPress={this.goToLocationScreen} style={styles.button}>
+          <Text style={styles.buttonText}>{this.getLocation()}</Text>
+        </TouchableHighlight>
+      </View>
     </View>
-  </View>
   )
 
   changeStartDate = (date) => {
@@ -162,7 +162,7 @@ export class YouAddLocation extends Component {
   )
 
   getCommentInput = () => (
-    <View>
+    <KeyboardAvoidingView>
       <Text style={styles.title}>Comment:</Text>
       <TextInput
         onChange={(comment) => this.setState({ comment })}
@@ -172,7 +172,7 @@ export class YouAddLocation extends Component {
         style={styles.textInput}
         multiline = {true}
       />
-    </View>
+    </KeyboardAvoidingView>
   )
 
   render() {
@@ -186,6 +186,7 @@ export class YouAddLocation extends Component {
             {this.getEndDate()}
             {this.getCommentInput()}
           </View>
+          <View style={{ height: 300}} />
         </ScrollView>
       </View>
     );
