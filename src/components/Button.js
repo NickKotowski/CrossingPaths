@@ -7,12 +7,12 @@ export default class Button extends Component{
     }
 
     render(){
-        const { children, text, style, textStyle, ...more } = this.props;
-        return(
-            <TouchableOpacity style={[styles.container, style]} {...more}>
-                <Text style={[styles.txtTitle, textStyle]}>{text}</Text>
-            </TouchableOpacity>
-        );
+      const { children, text, style, textStyle, ...more } = this.props;
+      return (
+        <TouchableOpacity style={[styles.container, style]} {...more}>
+            <Text style={[styles.txtTitle, textStyle]}>{text}</Text>
+        </TouchableOpacity>
+      );
     }
 }
 

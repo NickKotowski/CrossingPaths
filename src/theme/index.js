@@ -1,8 +1,8 @@
 // This folder is to put the helper to provide image, size, font
-import Color from './Color';
-import Image from './Image';
+import color from './color';
+import image from './image';
 
 export default {
-  Color,
-  Image,
+  color,
+  image,
 };

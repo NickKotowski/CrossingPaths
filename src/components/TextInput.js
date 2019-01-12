@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
   input: {
     fontStyle: "italic",
     borderBottomWidth: 1,
-    borderBottomColor: theme.Color.Border,
+    borderBottomColor: theme.color.border,
     fontSize: 18,
     padding: 5
   }

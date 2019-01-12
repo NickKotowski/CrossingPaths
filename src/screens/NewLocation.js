@@ -129,14 +129,14 @@ const styles = StyleSheet.create({
     height: 54,
     width: '95%',
     marginVertical: 20,
-    backgroundColor: theme.Color.Main,
+    backgroundColor: theme.color.main,
     borderRadius: 8,
     position: 'absolute',
     bottom: 4,
   },
 
   txtAddButton: {
-    color: theme.Color.White,
+    color: theme.color.white,
     fontWeight: 'bold',
   },
 

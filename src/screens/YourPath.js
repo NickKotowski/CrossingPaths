@@ -61,13 +61,13 @@ const styles = StyleSheet.create({
   btnTest: {
     height: 54,
     width: '100%',
-    backgroundColor: theme.Color.Main,
+    backgroundColor: theme.color.main,
     borderRadius: 10,
     marginTop: 10
   },
 
   txtTestButton: {
-    color: theme.Color.White,
+    color: theme.color.white,
   },
   buttons: {
     flexDirection: 'row',
@@ -171,6 +171,39 @@ export class YourPath extends Component {
     // this.listUsers();
     // console.log('Hello');
   }
+
+
+getStays = () => {
+  firebase.firestore().collection('users').doc('iOzpZbYYFDcBEZbW6tkz').get()
+  .then(snapshot => {
+    let allStays = [];
+    snapshot._data.stays.forEach(stay => firebase.firestore().collection('stays').doc(stay).get()
+    .then(result => {
+      allStays.push(result.data());
+    })
+    .catch((e) => console.log(e))
+    )
+    this.setState({ stays: allStays }, () => console.log(this.state));
+  })
+  .catch((e) => console.log(e));
+}
+
+getComponents = () => {
+  // const returnViews = ['Nick', 'Nick2'];
+  // return Views.map(name => <Text>{name}</Text>)
+  console.log(this.state.stays);
+  console.log(typeof this.state.stays);
+  return this.state.stays.forEach(object => {
+    console.log(object);
+    return (<Text>{name}</Text>)
+  });
+}
+  // this.state.stays.forEach(stay => {
+  //   console.log(stay);
+  //   returnViews.push(<Text>Nick</Text>)
+  // });
+  // console.log(this.state);
+  // return returnViews;
 
   _renderItem({item}) {
     if (!item) return null;

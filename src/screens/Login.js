@@ -1,29 +1,80 @@
 import React, {Component} from "react";
-import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
+import { View, Image, Text, StyleSheet, TextInput, TouchableOpacity, Animated, Easing } from "react-native";
 import { connect } from "react-redux";
+
+import { setUsername, increaseCount } from '../store/actions';
 
 import theme from '../theme';
 import Home from "../screens/Home";
 
-export default class Login extends Component {
-
+export class Login extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      text: '',
+      layoutHeightOfLoginBox: new Animated.Value(123),
+    };
   }
+
+  componentDidMount() {
+    Animated.timing(
+      this.state.layoutHeightOfLoginBox,
+      {
+        toValue: 280,
+        easing: Easing.back(),
+      },
+    ).start();
+  }
+
+  getStyleForLoginButton = () => {
+    if (this.state.text === '') {
+      return styles.loginButtonInactive;
+    }
+    return styles.loginButtonActive;
+  }
+
+  onLogin = () => {
+    if (this.state.text === '') {
+      alert("Please write a user name. This is what other people will search for when trying to find you");
+    } else {
+      this.props.setUsername(this.state.text);
+      this.props.navigation.navigate("You");
+    }
+  }
+
   render() {
     return (
-      <View style={{flex: 1, justifyContent: "center", alignItems: "center"}}>
-        <Text>Hello</Text>
-        <TouchableOpacity
-          onPress={() => this.props.navigation.navigate("Home")}
+      <View style={styles.container}>
+        <Animated.View
+          style={[styles.wrapper, { height: this.state.layoutHeightOfLoginBox }]}
         >
-          <Text>Login</Text>
-        </TouchableOpacity>
+          <Image source={require('../assets/logo_with_text.png')}/>
+          <Text style={styles.label}>Select a user name</Text>
+          <TextInput
+             style={styles.textInput}
+             onChangeText={(text) => this.setState({text})}
+             value={this.state.text}
+             placeholder={'Write a user name'}
+          />
+          <TouchableOpacity
+            style={[styles.loginButton, this.getStyleForLoginButton()]}
+            onPress={this.onLogin}
+          >
+            <Text style={styles.loginButtonText}>Create Account</Text>
+          </TouchableOpacity>
+        </Animated.View>
+        <Text style={styles.text}>
+          Alpha Version - Created @ Hackathon Hub Hoi An (Vietnam) 2019
+        </Text>
       </View>
     );
   }
 }
+
+const LoginConnected = connect(state => (
+  { app: state.app }), { setUsername, increaseCount })(Login);
+
+export default LoginConnected;
 
 const styles = StyleSheet.create({
   container: {
@@ -32,21 +83,45 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
-
-  btnLogin: {
-    height: 54,
-    width: '95%',
-    marginVertical: 20,
-    backgroundColor: theme.Color.Main,
-    borderRadius: 8,
+  wrapper: {
+    width: 200,
+    justifyContent: 'flex-start',
+    alignItems: 'center',
+    overflow: 'hidden',
   },
-
-  txtLoginButton: {
-    color: theme.Color.White,
-    fontWeight: 'bold',
+  text: {
+    fontSize: 12,
+    color: theme.color.main,
+    position: 'absolute',
+    bottom: 20,
+    width: '60%',
+    textAlign: 'center',
   },
-
-  input: {
-    padding: 15,
+  label: {
+    fontSize: 16,
+    color: theme.color.main,
+    paddingTop: 40,
   },
-})
+  textInput: {
+    borderBottomColor: theme.color.main,
+    borderBottomWidth: 1,
+    paddingTop: 20,
+    width: '60%',
+  },
+  loginButton: {
+    marginTop: 20,
+    padding: 5,
+    paddingLeft: 10,
+    paddingRight: 10,
+    borderRadius: 20,
+  },
+  loginButtonActive: {
+    backgroundColor: theme.color.main,
+  },
+  loginButtonInactive: {
+    backgroundColor: theme.color.lightGray
+  },
+  loginButtonText: {
+    color: 'white',
+  }
+});
