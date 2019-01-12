@@ -11,7 +11,7 @@ export class LaunchScreen extends Component {
   }
 
   componentDidMount() {
-    setTimeout(this.navigateToNextScreen, 2000);
+    setTimeout(this.navigateToNextScreen, 10);
   }
 
   navigateToNextScreen = () => {

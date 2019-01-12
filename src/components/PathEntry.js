@@ -1,34 +1,33 @@
 import React, { Component } from 'react';
-import { View, TouchableHighlight, Text, StyleSheet } from'react-native';
+import { View, TouchableHighlight, Text, StyleSheet, Image } from'react-native';
 
-export default class Entry extends Component{
-    constructor(props){
-        super(props);
-    }
+export default class PathEntry extends Component {
+  constructor(props){
+      super(props);
+  }
 
-    render(){
-        const { data, ...more } = this.props;
-        return (
-          <View style={styles.item}>
-            <View style={styles.title}>
-              <Text style={styles.name}>{data.name}</Text>
-              <View style={styles.row}>
-                <Text style={styles.number}>{data.lang.toString() + ', '}</Text>
-                <Text style={styles.number}>{data.lat.toString()}</Text>
-              </View>
-            </View>
-
-            <View style={styles.row}>
-              <Text style={styles.number}>{data.from+ ' - '}</Text>
-              <Text style={styles.number}>{data.to}</Text>
-            </View>
-            <Text style={styles.description}>{data.description}</Text>
-            <View style={styles.buttons}>
-
-            </View>
+  render(){
+    return (
+      <View style={styles.item}>
+        <View style={styles.title}>
+          <Text style={styles.name}>{data.name}</Text>
+          <View style={styles.row}>
+            <Text style={styles.number}>{data.lang.toString() + ', '}</Text>
+            <Text style={styles.number}>{data.lat.toString()}</Text>
           </View>
-        );
-    }
+        </View>
+
+        <View style={styles.row}>
+          <Text style={styles.number}>{data.from+ ' - '}</Text>
+          <Text style={styles.number}>{data.to}</Text>
+        </View>
+        <Text style={styles.description}>{data.description}</Text>
+        <View style={styles.buttons}>
+
+        </View>
+      </View>
+    );
+  }
 }
 
 const styles = StyleSheet.create({

@@ -14,6 +14,7 @@ import Login from '../screens/Login';
 import Home from '../screens/Home';
 // import YourPath from '../screens/YourPath';
 // import CrossingPaths from '../screens/CrossingPaths';
+import YourPathNavigator from './YourPathNavigator';
 
 const styles = StyleSheet.create({
   tabbarIcon: {
@@ -24,7 +25,7 @@ const styles = StyleSheet.create({
 
 const AppStack = createBottomTabNavigator({
   YourPath: {
-    screen: Home,
+    screen: YourPathNavigator,
     navigationOptions: {
       tabBarLabel: 'Your Path',
       tabBarIcon: ({ focused }) => (
