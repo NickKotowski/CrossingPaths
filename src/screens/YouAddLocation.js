@@ -162,7 +162,7 @@ export class YouAddLocation extends Component {
   )
 
   getCommentInput = () => (
-    <KeyboardAvoidingView>
+    <View>
       <Text style={styles.title}>Comment:</Text>
       <TextInput
         onChange={(comment) => this.setState({ comment })}
@@ -172,7 +172,7 @@ export class YouAddLocation extends Component {
         style={styles.textInput}
         multiline = {true}
       />
-    </KeyboardAvoidingView>
+    </View>
   )
 
   render() {
